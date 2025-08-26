@@ -1,6 +1,6 @@
 name: 'Deploy process model to stage'
 
-on: [repository_dispatch]
+on: [workflow_dispatch]
 
 jobs:
   deploy:
