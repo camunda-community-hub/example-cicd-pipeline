@@ -1,0 +1,13 @@
+{
+  "name": "example-cicd-pipeline",
+  "version": "1.0.0",
+  "description": "This is an example that shows what a CI/CD pipeline for processes could look like.",
+  "scripts": {
+    "deploy": "node deploy.js",
+    "test": "echo \"Error: no test specified\""
+  },
+  "dependencies": {
+    "@camunda8/sdk": "^8.7.28"
+  },
+  "type": "module"
+}
