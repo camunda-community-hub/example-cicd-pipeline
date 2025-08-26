@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_01hbsbz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.38.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.7.0">
+  <bpmn:process id="Process_02mrmrs" isExecutable="true">
+    <bpmn:startEvent id="ExampleRequiredStartEvent" name="Example required">
+      <bpmn:outgoing>Flow_1kaf7s4</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="CreateExampleTask" name="Create example">
+      <bpmn:incoming>Flow_1kaf7s4</bpmn:incoming>
+      <bpmn:outgoing>Flow_1wdf37n</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1kaf7s4" sourceRef="ExampleRequiredStartEvent" targetRef="CreateExampleTask" />
+    <bpmn:endEvent id="ExampleCreatedEndEvent" name="Example created">
+      <bpmn:incoming>Flow_1wdf37n</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1wdf37n" sourceRef="CreateExampleTask" targetRef="ExampleCreatedEndEvent" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_02mrmrs">
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="ExampleRequiredStartEvent">
+        <dc:Bounds x="182" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="157" y="145" width="87" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ttm1ex_di" bpmnElement="CreateExampleTask">
+        <dc:Bounds x="270" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_112rqch_di" bpmnElement="ExampleCreatedEndEvent">
+        <dc:Bounds x="422" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="399" y="145" width="83" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1kaf7s4_di" bpmnElement="Flow_1kaf7s4">
+        <di:waypoint x="218" y="120" />
+        <di:waypoint x="270" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wdf37n_di" bpmnElement="Flow_1wdf37n">
+        <di:waypoint x="370" y="120" />
+        <di:waypoint x="422" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
