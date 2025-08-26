@@ -4,10 +4,12 @@
   "description": "This is an example that shows what a CI/CD pipeline for processes could look like.",
   "scripts": {
     "deploy": "node deploy.js",
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "apply-version-tag": "node apply-version-tag.js"
   },
   "dependencies": {
-    "@camunda8/sdk": "^8.7.28"
-  },
-  "type": "module"
+    "@camunda8/sdk": "^8.7.28",
+    "bpmn-moddle": "^9.0.3",
+    "zeebe-bpmn-moddle": "^1.11.0"
+  }
 }
