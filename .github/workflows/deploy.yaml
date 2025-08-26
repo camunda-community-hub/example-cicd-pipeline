@@ -18,7 +18,6 @@ jobs:
           npm run test
   deploy-to-dev:
     needs: [perform-checks]
-    if: ${{ github.event_name == 'workflow_dispatch' }}
     environment: 'default'
     runs-on: 'ubuntu-latest'
     steps:
