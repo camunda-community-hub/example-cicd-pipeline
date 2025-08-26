@@ -1,5 +1,5 @@
 
-name: 'Deploy process model to stage'
+name: 'Deploy process model'
 
 on: 
   workflow_dispatch:
@@ -35,6 +35,7 @@ jobs:
           npm run deploy
   deploy-to-test:
     runs-on: 'ubuntu-latest'
+    if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
     needs: [perform-checks]
     environment: 'test'
     steps:
